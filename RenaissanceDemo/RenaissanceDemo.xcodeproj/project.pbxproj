@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E822F29EE26EF3770E4E1432 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32908DF6C6DEB344D3A1A3EE /* libPods.a */; };
+		EA03F3F61A36A658003BD1B6 /* re_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA03F3F41A36A658003BD1B6 /* re_close@2x.png */; };
+		EA03F3F91A36A905003BD1B6 /* camera_switcher@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA03F3F81A36A905003BD1B6 /* camera_switcher@2x.png */; };
+		EA0416281A36D055008B576C /* flash_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA0416271A36D055008B576C /* flash_on@2x.png */; };
+		EA04162B1A36D559008B576C /* flash_auto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA0416291A36D559008B576C /* flash_auto@2x.png */; };
+		EA04162C1A36D559008B576C /* flash_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA04162A1A36D559008B576C /* flash_off@2x.png */; };
+		EA2E261E1A35E2420057D449 /* video_trigger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA2E261D1A35E2420057D449 /* video_trigger@2x.png */; };
+		EA32C8971A3AD69500272597 /* library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA32C8961A3AD69500272597 /* library@2x.png */; };
+		EA32C8991A3ADB7100272597 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA32C8981A3ADB7100272597 /* MobileCoreServices.framework */; };
+		EA5A71C71AB6C9D700EBE182 /* RECameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A71C61AB6C9D700EBE182 /* RECameraView.m */; };
+		EA66ECAD1A3C1D2B000B4C16 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66ECAA1A3C1D2B000B4C16 /* UIImage+Resize.m */; };
+		EA66ECAE1A3C1D2B000B4C16 /* UIImage+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66ECAC1A3C1D2B000B4C16 /* UIImage+TintColor.m */; };
+		EA84E2FA1A3208C7001DAF57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E2F91A3208C7001DAF57 /* main.m */; };
+		EA84E2FD1A3208C7001DAF57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E2FC1A3208C7001DAF57 /* AppDelegate.m */; };
+		EA84E3001A3208C7001DAF57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E2FF1A3208C7001DAF57 /* ViewController.m */; };
+		EA84E3051A3208C7001DAF57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA84E3041A3208C7001DAF57 /* Images.xcassets */; };
+		EA84E3081A3208C7001DAF57 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA84E3061A3208C7001DAF57 /* LaunchScreen.xib */; };
+		EA84E3141A3208C7001DAF57 /* RenaissanceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E3131A3208C7001DAF57 /* RenaissanceDemoTests.m */; };
+		EA84E3201A320D47001DAF57 /* RECameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E31F1A320D47001DAF57 /* RECameraController.m */; };
+		EA90C6FB1A3695050056A948 /* REGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA90C6FA1A3695050056A948 /* REGridView.m */; };
+		EA90C6FD1A36A03E0056A948 /* grid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA90C6FC1A36A03E0056A948 /* grid@2x.png */; };
+		EAAF04601AA5B29B0018727A /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAF045F1AA5B29B0018727A /* UIButton+Block.m */; };
+		EAB850F61A334D00008E3DCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB850F51A334D00008E3DCB /* UIKit.framework */; };
+		EAB850F81A334D1C008E3DCB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB850F71A334D1C008E3DCB /* AVFoundation.framework */; };
+		EAB850FA1A334D3E008E3DCB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB850F91A334D3E008E3DCB /* QuartzCore.framework */; };
+		EAB850FD1A335948008E3DCB /* photo_trigger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB850FC1A335948008E3DCB /* photo_trigger@2x.png */; };
+		EAB850FF1A335D8F008E3DCB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB850FE1A335D8F008E3DCB /* ImageIO.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA84E30E1A3208C7001DAF57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA84E2EC1A3208C7001DAF57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA84E2F31A3208C7001DAF57;
+			remoteInfo = RenaissanceDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32908DF6C6DEB344D3A1A3EE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B5052B22FD869E83F93AC9D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		859D086A48B5B79C317D7065 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EA03F3F41A36A658003BD1B6 /* re_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "re_close@2x.png"; sourceTree = "<group>"; };
+		EA03F3F81A36A905003BD1B6 /* camera_switcher@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_switcher@2x.png"; sourceTree = "<group>"; };
+		EA0416271A36D055008B576C /* flash_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flash_on@2x.png"; sourceTree = "<group>"; };
+		EA0416291A36D559008B576C /* flash_auto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flash_auto@2x.png"; sourceTree = "<group>"; };
+		EA04162A1A36D559008B576C /* flash_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flash_off@2x.png"; sourceTree = "<group>"; };
+		EA2E261D1A35E2420057D449 /* video_trigger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_trigger@2x.png"; sourceTree = "<group>"; };
+		EA32C8961A3AD69500272597 /* library@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library@2x.png"; sourceTree = "<group>"; };
+		EA32C8981A3ADB7100272597 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EA5A71C51AB6C9D700EBE182 /* RECameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RECameraView.h; path = RenaissanceDemo/Renaissance/RECameraView.h; sourceTree = SOURCE_ROOT; };
+		EA5A71C61AB6C9D700EBE182 /* RECameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RECameraView.m; path = RenaissanceDemo/Renaissance/RECameraView.m; sourceTree = SOURCE_ROOT; };
+		EA66ECA91A3C1D2B000B4C16 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		EA66ECAA1A3C1D2B000B4C16 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		EA66ECAB1A3C1D2B000B4C16 /* UIImage+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TintColor.h"; sourceTree = "<group>"; };
+		EA66ECAC1A3C1D2B000B4C16 /* UIImage+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TintColor.m"; sourceTree = "<group>"; };
+		EA84E2F41A3208C7001DAF57 /* RenaissanceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RenaissanceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA84E2F81A3208C7001DAF57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA84E2F91A3208C7001DAF57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA84E2FB1A3208C7001DAF57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA84E2FC1A3208C7001DAF57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA84E2FE1A3208C7001DAF57 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA84E2FF1A3208C7001DAF57 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA84E3041A3208C7001DAF57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EA84E3071A3208C7001DAF57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EA84E30D1A3208C7001DAF57 /* RenaissanceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RenaissanceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA84E3121A3208C7001DAF57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA84E3131A3208C7001DAF57 /* RenaissanceDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenaissanceDemoTests.m; sourceTree = "<group>"; };
+		EA84E31E1A320D47001DAF57 /* RECameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECameraController.h; sourceTree = "<group>"; };
+		EA84E31F1A320D47001DAF57 /* RECameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECameraController.m; sourceTree = "<group>"; };
+		EA90C6F91A3695050056A948 /* REGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REGridView.h; sourceTree = "<group>"; };
+		EA90C6FA1A3695050056A948 /* REGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REGridView.m; sourceTree = "<group>"; };
+		EA90C6FC1A36A03E0056A948 /* grid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid@2x.png"; sourceTree = "<group>"; };
+		EAAF045E1AA5B29B0018727A /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		EAAF045F1AA5B29B0018727A /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
+		EAB850F51A334D00008E3DCB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EAB850F71A334D1C008E3DCB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EAB850F91A334D3E008E3DCB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EAB850FC1A335948008E3DCB /* photo_trigger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_trigger@2x.png"; sourceTree = "<group>"; };
+		EAB850FE1A335D8F008E3DCB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA84E2F11A3208C7001DAF57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA32C8991A3ADB7100272597 /* MobileCoreServices.framework in Frameworks */,
+				EAB850FF1A335D8F008E3DCB /* ImageIO.framework in Frameworks */,
+				EAB850FA1A334D3E008E3DCB /* QuartzCore.framework in Frameworks */,
+				EAB850F81A334D1C008E3DCB /* AVFoundation.framework in Frameworks */,
+				EAB850F61A334D00008E3DCB /* UIKit.framework in Frameworks */,
+				E822F29EE26EF3770E4E1432 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA84E30A1A3208C7001DAF57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C1FA65AF9CB042DEF27ABC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA32C8981A3ADB7100272597 /* MobileCoreServices.framework */,
+				EAB850FE1A335D8F008E3DCB /* ImageIO.framework */,
+				EAB850F91A334D3E008E3DCB /* QuartzCore.framework */,
+				EAB850F71A334D1C008E3DCB /* AVFoundation.framework */,
+				EAB850F51A334D00008E3DCB /* UIKit.framework */,
+				32908DF6C6DEB344D3A1A3EE /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73B0EBB30E385CF6D2E10946 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				859D086A48B5B79C317D7065 /* Pods.debug.xcconfig */,
+				6B5052B22FD869E83F93AC9D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA66ECA81A3C1D2B000B4C16 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EA66ECA91A3C1D2B000B4C16 /* UIImage+Resize.h */,
+				EA66ECAA1A3C1D2B000B4C16 /* UIImage+Resize.m */,
+				EA66ECAB1A3C1D2B000B4C16 /* UIImage+TintColor.h */,
+				EA66ECAC1A3C1D2B000B4C16 /* UIImage+TintColor.m */,
+				EAAF045E1AA5B29B0018727A /* UIButton+Block.h */,
+				EAAF045F1AA5B29B0018727A /* UIButton+Block.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		EA84E2EB1A3208C7001DAF57 = {
+			isa = PBXGroup;
+			children = (
+				EA84E2F61A3208C7001DAF57 /* RenaissanceDemo */,
+				EA84E3101A3208C7001DAF57 /* RenaissanceDemoTests */,
+				EA84E2F51A3208C7001DAF57 /* Products */,
+				73B0EBB30E385CF6D2E10946 /* Pods */,
+				1C1FA65AF9CB042DEF27ABC1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EA84E2F51A3208C7001DAF57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA84E2F41A3208C7001DAF57 /* RenaissanceDemo.app */,
+				EA84E30D1A3208C7001DAF57 /* RenaissanceDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA84E2F61A3208C7001DAF57 /* RenaissanceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EA84E31D1A320C9C001DAF57 /* Renaissance */,
+				EA84E2FB1A3208C7001DAF57 /* AppDelegate.h */,
+				EA84E2FC1A3208C7001DAF57 /* AppDelegate.m */,
+				EA84E2FE1A3208C7001DAF57 /* ViewController.h */,
+				EA84E2FF1A3208C7001DAF57 /* ViewController.m */,
+				EA84E3041A3208C7001DAF57 /* Images.xcassets */,
+				EA84E3061A3208C7001DAF57 /* LaunchScreen.xib */,
+				EA84E2F71A3208C7001DAF57 /* Supporting Files */,
+			);
+			path = RenaissanceDemo;
+			sourceTree = "<group>";
+		};
+		EA84E2F71A3208C7001DAF57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA84E2F81A3208C7001DAF57 /* Info.plist */,
+				EA84E2F91A3208C7001DAF57 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA84E3101A3208C7001DAF57 /* RenaissanceDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA84E3131A3208C7001DAF57 /* RenaissanceDemoTests.m */,
+				EA84E3111A3208C7001DAF57 /* Supporting Files */,
+			);
+			path = RenaissanceDemoTests;
+			sourceTree = "<group>";
+		};
+		EA84E3111A3208C7001DAF57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA84E3121A3208C7001DAF57 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA84E31D1A320C9C001DAF57 /* Renaissance */ = {
+			isa = PBXGroup;
+			children = (
+				EA66ECA81A3C1D2B000B4C16 /* Category */,
+				EAB850FB1A335931008E3DCB /* Resources */,
+				EA84E31E1A320D47001DAF57 /* RECameraController.h */,
+				EA84E31F1A320D47001DAF57 /* RECameraController.m */,
+				EA5A71C51AB6C9D700EBE182 /* RECameraView.h */,
+				EA5A71C61AB6C9D700EBE182 /* RECameraView.m */,
+				EA90C6F91A3695050056A948 /* REGridView.h */,
+				EA90C6FA1A3695050056A948 /* REGridView.m */,
+			);
+			path = Renaissance;
+			sourceTree = "<group>";
+		};
+		EAB850FB1A335931008E3DCB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA32C8961A3AD69500272597 /* library@2x.png */,
+				EA0416291A36D559008B576C /* flash_auto@2x.png */,
+				EA04162A1A36D559008B576C /* flash_off@2x.png */,
+				EA0416271A36D055008B576C /* flash_on@2x.png */,
+				EA03F3F81A36A905003BD1B6 /* camera_switcher@2x.png */,
+				EA03F3F41A36A658003BD1B6 /* re_close@2x.png */,
+				EA90C6FC1A36A03E0056A948 /* grid@2x.png */,
+				EA2E261D1A35E2420057D449 /* video_trigger@2x.png */,
+				EAB850FC1A335948008E3DCB /* photo_trigger@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA84E2F31A3208C7001DAF57 /* RenaissanceDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA84E3171A3208C7001DAF57 /* Build configuration list for PBXNativeTarget "RenaissanceDemo" */;
+			buildPhases = (
+				A17724C78BD6D3EE91162283 /* Check Pods Manifest.lock */,
+				EA84E2F01A3208C7001DAF57 /* Sources */,
+				EA84E2F11A3208C7001DAF57 /* Frameworks */,
+				EA84E2F21A3208C7001DAF57 /* Resources */,
+				28F7915BDDC504C7FDB6F08C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RenaissanceDemo;
+			productName = RenaissanceDemo;
+			productReference = EA84E2F41A3208C7001DAF57 /* RenaissanceDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA84E30C1A3208C7001DAF57 /* RenaissanceDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA84E31A1A3208C7001DAF57 /* Build configuration list for PBXNativeTarget "RenaissanceDemoTests" */;
+			buildPhases = (
+				EA84E3091A3208C7001DAF57 /* Sources */,
+				EA84E30A1A3208C7001DAF57 /* Frameworks */,
+				EA84E30B1A3208C7001DAF57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA84E30F1A3208C7001DAF57 /* PBXTargetDependency */,
+			);
+			name = RenaissanceDemoTests;
+			productName = RenaissanceDemoTests;
+			productReference = EA84E30D1A3208C7001DAF57 /* RenaissanceDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA84E2EC1A3208C7001DAF57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = tony;
+				TargetAttributes = {
+					EA84E2F31A3208C7001DAF57 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					EA84E30C1A3208C7001DAF57 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = EA84E2F31A3208C7001DAF57;
+					};
+				};
+			};
+			buildConfigurationList = EA84E2EF1A3208C7001DAF57 /* Build configuration list for PBXProject "RenaissanceDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA84E2EB1A3208C7001DAF57;
+			productRefGroup = EA84E2F51A3208C7001DAF57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA84E2F31A3208C7001DAF57 /* RenaissanceDemo */,
+				EA84E30C1A3208C7001DAF57 /* RenaissanceDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA84E2F21A3208C7001DAF57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA90C6FD1A36A03E0056A948 /* grid@2x.png in Resources */,
+				EA04162C1A36D559008B576C /* flash_off@2x.png in Resources */,
+				EA0416281A36D055008B576C /* flash_on@2x.png in Resources */,
+				EA84E3081A3208C7001DAF57 /* LaunchScreen.xib in Resources */,
+				EA04162B1A36D559008B576C /* flash_auto@2x.png in Resources */,
+				EA32C8971A3AD69500272597 /* library@2x.png in Resources */,
+				EA2E261E1A35E2420057D449 /* video_trigger@2x.png in Resources */,
+				EAB850FD1A335948008E3DCB /* photo_trigger@2x.png in Resources */,
+				EA84E3051A3208C7001DAF57 /* Images.xcassets in Resources */,
+				EA03F3F61A36A658003BD1B6 /* re_close@2x.png in Resources */,
+				EA03F3F91A36A905003BD1B6 /* camera_switcher@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA84E30B1A3208C7001DAF57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28F7915BDDC504C7FDB6F08C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A17724C78BD6D3EE91162283 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA84E2F01A3208C7001DAF57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA84E3001A3208C7001DAF57 /* ViewController.m in Sources */,
+				EA5A71C71AB6C9D700EBE182 /* RECameraView.m in Sources */,
+				EA84E2FD1A3208C7001DAF57 /* AppDelegate.m in Sources */,
+				EA84E2FA1A3208C7001DAF57 /* main.m in Sources */,
+				EAAF04601AA5B29B0018727A /* UIButton+Block.m in Sources */,
+				EA90C6FB1A3695050056A948 /* REGridView.m in Sources */,
+				EA66ECAE1A3C1D2B000B4C16 /* UIImage+TintColor.m in Sources */,
+				EA84E3201A320D47001DAF57 /* RECameraController.m in Sources */,
+				EA66ECAD1A3C1D2B000B4C16 /* UIImage+Resize.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA84E3091A3208C7001DAF57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA84E3141A3208C7001DAF57 /* RenaissanceDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA84E30F1A3208C7001DAF57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA84E2F31A3208C7001DAF57 /* RenaissanceDemo */;
+			targetProxy = EA84E30E1A3208C7001DAF57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA84E3061A3208C7001DAF57 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA84E3071A3208C7001DAF57 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA84E3151A3208C7001DAF57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA84E3161A3208C7001DAF57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA84E3181A3208C7001DAF57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 859D086A48B5B79C317D7065 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RenaissanceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RenaissanceDemo/Renaissance/Category/RenaissanceDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA84E3191A3208C7001DAF57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B5052B22FD869E83F93AC9D /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RenaissanceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RenaissanceDemo/Renaissance/Category/RenaissanceDemo-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		EA84E31B1A3208C7001DAF57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RenaissanceDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RenaissanceDemo.app/RenaissanceDemo";
+			};
+			name = Debug;
+		};
+		EA84E31C1A3208C7001DAF57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RenaissanceDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RenaissanceDemo.app/RenaissanceDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA84E2EF1A3208C7001DAF57 /* Build configuration list for PBXProject "RenaissanceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA84E3151A3208C7001DAF57 /* Debug */,
+				EA84E3161A3208C7001DAF57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA84E3171A3208C7001DAF57 /* Build configuration list for PBXNativeTarget "RenaissanceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA84E3181A3208C7001DAF57 /* Debug */,
+				EA84E3191A3208C7001DAF57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA84E31A1A3208C7001DAF57 /* Build configuration list for PBXNativeTarget "RenaissanceDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA84E31B1A3208C7001DAF57 /* Debug */,
+				EA84E31C1A3208C7001DAF57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA84E2EC1A3208C7001DAF57 /* Project object */;
+}
