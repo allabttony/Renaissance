@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
 	s.subspec "Core" do |ss|
     ss.source_files  = 'RenaissanceDemo/RenaissanceDemo/Renaissance/*.{h,m}', 'RenaissanceDemo/RenaissanceDemo/Renaissance/Category/*.{h,m}'
-		ss.resource_bundle = { ResourceBundle = ['RenaissanceDemo/RenaissanceDemo/Renaissance/Resources/*.png'] }
+		ss.resource_bundle = { ResourceBundle => ['RenaissanceDemo/RenaissanceDemo/Renaissance/Resources/*.png'] }
     ss.dependency "PBJVision"
   end
 
