@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
 	s.subspec "Core" do |ss|
-    ss.source_files  = 'RenaissanceDemo/RenaissanceDemo/Renaissance/*.{h,m}', 'RenaissanceDemo/RenaissanceDemo/Renaissance/Category/*.{h,m}', 'RenaissanceDemo/RenaissanceDemo/Renaissance/Resources/*.png'
+    ss.source_files  = 'RenaissanceDemo/RenaissanceDemo/Renaissance/*.{h,m}', 'RenaissanceDemo/RenaissanceDemo/Renaissance/Category/*.{h,m}'
+		ss.resources = 'RenaissanceDemo/RenaissanceDemo/Renaissance/Resources/*.png'
     ss.dependency "PBJVision"
   end
 

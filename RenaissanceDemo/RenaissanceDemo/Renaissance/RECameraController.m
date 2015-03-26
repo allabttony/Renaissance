@@ -13,7 +13,7 @@
 #import "UIButton+Block.h"
 
 // PBJVision
-#import <PBJVision.h>
+#import <PBJVision/PBJVision.h>
 
 #import "UIImage+Resize.h"
 
