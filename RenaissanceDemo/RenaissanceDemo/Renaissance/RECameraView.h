@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <PBJVision.h>
+#import <PBJVision/PBJVision.h>
 
 @interface RECameraView : UIView
 

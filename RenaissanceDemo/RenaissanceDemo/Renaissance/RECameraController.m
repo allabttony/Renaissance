@@ -6,24 +6,16 @@
 //
 
 #import "RECameraController.h"
+
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <GLKit/GLKit.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-
-#import "UIButton+Block.h"
-
-// PBJVision
 #import <PBJVision/PBJVision.h>
-
+#import "UIButton+Block.h"
 #import "UIImage+Resize.h"
-
 #import "RECameraView.h"
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-
-#define VideoTriggerImage [UIImage imageNamed:@"video_trigger"]
-#define VideoTriggerStopImage [UIImage imageNamed:@"video_stop"]
-#define PhotoTriggerImage [UIImage imageNamed:@"photo_trigger"]
 
 @interface RECameraController () <PBJVisionDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 

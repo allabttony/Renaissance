@@ -8,14 +8,13 @@
 
 #import "RECameraView.h"
 
-#import <PBJVision.h>
-
 #import "REGridView.h"
-
 #import "UIImage+TintColor.h"
-
-
 #import "RECameraController.h"
+
+#import <AssetsLibrary/AssetsLibrary.h>
+
+#import "RELibraryManager.h"
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
@@ -28,13 +27,13 @@
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
 
-#define VideoTriggerImage [UIImage imageNamed:@"video_trigger"]
+#define VideoTriggerImage [UIImage imageNamed:@"re_camera_shot"]
 #define VideoTriggerStopImage [UIImage imageNamed:@"video_stop"]
-#define PhotoTriggerImage [UIImage imageNamed:@"photo_trigger"]
+#define PhotoTriggerImage [UIImage imageNamed:@"re_camera_shot"]
 
-#define FlashModeOffImage [UIImage imageNamed:@"flash_off"]
-#define FlashModeOnImage [UIImage imageNamed:@"flash_on"]
-#define FlashModeAutoImage [UIImage imageNamed:@"flash_auto"]
+#define FlashModeOffImage [UIImage imageNamed:@"re_camera_flash_stop"]
+#define FlashModeOnImage [UIImage imageNamed:@"re_camera_flash_force"]
+#define FlashModeAutoImage [UIImage imageNamed:@"re_camera_flash_auto"]
 
 #define ThemeColor [UIColor colorWithRed:223/255.0f green:76/255.0f  blue:60/255.0f alpha:1.0f]
 
@@ -67,7 +66,6 @@
         [self addSubview:_topContainerBar];
         
         [_topContainerBar addSubview:self.closeButton];
-        [_topContainerBar addSubview:self.libraryButton];
         
         if (IS_IPHONE_4_OR_LESS) {
             [_topContainerBar addSubview:self.gridButton];
@@ -102,10 +100,13 @@
         [self addSubview:_bottomContainerBar];
         
         _photoTrigger = [UIButton buttonWithType:UIButtonTypeCustom];
-        _photoTrigger.frame = CGRectMake(0, 0, SCREEN_WIDTH, _bottomContainerBar.frame.size.height);
+        _photoTrigger.frame = CGRectMake(0, 0, 171 / 2.0f, 171 / 2.0f);
+        _photoTrigger.center = CGPointMake(_bottomContainerBar.frame.size.width / 2.0f, _bottomContainerBar.frame.size.height / 2.0f);
         [_photoTrigger setImage:PhotoTriggerImage forState:UIControlStateNormal];
         [_photoTrigger setBackgroundColor:[UIColor blackColor]];
         [_bottomContainerBar addSubview:_photoTrigger];
+        
+        [_bottomContainerBar addSubview:self.libraryButton];
     }
 }
 
@@ -146,9 +147,8 @@
     if (!_closeButton) {
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _closeButton.frame = CGRectMake(0, 0, _topContainerBar.frame.size.height, _topContainerBar.frame.size.height);
-        [_closeButton setImage:[UIImage imageNamed:@"re_close"] forState:UIControlStateNormal];
-        _closeButton.center = CGPointMake(_topContainerBar.frame.size.height, _topContainerBar.frame.size.height / 2);
-        [_topContainerBar addSubview:_closeButton];
+        [_closeButton setImage:[UIImage imageNamed:@"re_topbar_no"] forState:UIControlStateNormal];
+        _closeButton.center = CGPointMake(32, _topContainerBar.frame.size.height / 2);
     }
     return _closeButton;
 }
@@ -156,10 +156,17 @@
 - (UIButton *)libraryButton {
     if (!_libraryButton) {
         _libraryButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _libraryButton.frame = CGRectMake(0, 0, _topContainerBar.frame.size.height, _topContainerBar.frame.size.height);
-        [_libraryButton setImage:[UIImage imageNamed:@"library"] forState:UIControlStateNormal];
-        _libraryButton.center = CGPointMake(SCREEN_WIDTH - _topContainerBar.frame.size.height, _topContainerBar.frame.size.height / 2);
-        [_topContainerBar addSubview:_libraryButton];
+        _libraryButton.backgroundColor = [UIColor whiteColor];
+        _libraryButton.frame = CGRectMake(0, 0, 32.0f, 32.0f);
+        _libraryButton.center = CGPointMake(_bottomContainerBar.frame.size.width / 2.0f - 170 / 2.0f - 20.0f, _bottomContainerBar.frame.size.height / 2.0f);
+        [_libraryButton.layer setCornerRadius:4];
+        
+        if ([ALAssetsLibrary authorizationStatus] !=  ALAuthorizationStatusDenied) {
+            __weak typeof(self) weakSelf = self;
+            [[RELibraryManager sharedInstance] loadLastItemWithBlock:^(BOOL success, UIImage *image) {
+                [weakSelf.libraryButton setBackgroundImage:image forState:UIControlStateNormal];
+            }];
+        }
     }
     return _libraryButton;
 }
@@ -167,16 +174,16 @@
 - (UIButton *)gridButton {
     if (!_gridButton) {
         _gridButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _gridButton.frame = CGRectMake(0, 0, 32, 32);
+        _gridButton.frame = CGRectMake(0, 0, 65 / 2.0f, 65 / 2.0f);
         
         if (_middleContainerBar) {
-            _gridButton.center = CGPointMake(SCREEN_WIDTH / 2 - 80, _middleContainerBar.frame.size.height / 2);
+            _gridButton.center = CGPointMake(SCREEN_WIDTH / 2.0f, _middleContainerBar.frame.size.height / 2);
         } else {
-            _gridButton.center = CGPointMake(SCREEN_WIDTH / 2 - 60, _topContainerBar.frame.size.height / 2);
+            _gridButton.center = CGPointMake(SCREEN_WIDTH / 2.0f, _topContainerBar.frame.size.height / 2);
         }
         
-        [_gridButton setImage:[[UIImage imageNamed:@"grid"] tintImageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
-        [_gridButton setImage:[[UIImage imageNamed:@"grid"] tintImageWithColor:ThemeColor] forState:UIControlStateSelected];
+        [_gridButton setImage:[[UIImage imageNamed:@"vr_camera_grid"] tintImageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
+        [_gridButton setImage:[[UIImage imageNamed:@"vr_camera_grid"] tintImageWithColor:ThemeColor] forState:UIControlStateSelected];
     }
     return _gridButton;
 }
@@ -185,14 +192,14 @@
     if (!_cameraSwitcherButton) {
         _cameraSwitcherButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_cameraSwitcherButton setBackgroundColor:[UIColor clearColor]];
-        [_cameraSwitcherButton setImage:[[UIImage imageNamed:@"camera_switcher"] tintImageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
-        [_cameraSwitcherButton setImage:[[UIImage imageNamed:@"camera_switcher"] tintImageWithColor:ThemeColor] forState:UIControlStateSelected];
-        [_cameraSwitcherButton setFrame:CGRectMake(0, 0, 32, 32)];
+        [_cameraSwitcherButton setImage:[[UIImage imageNamed:@"vr_camera_switch"] tintImageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
+        [_cameraSwitcherButton setImage:[[UIImage imageNamed:@"vr_camera_switch"] tintImageWithColor:ThemeColor] forState:UIControlStateSelected];
+        [_cameraSwitcherButton setFrame:CGRectMake(0, 0, 65 / 2.0f, 65 / 2.0f)];
         
         if (_middleContainerBar) {
-            [_cameraSwitcherButton setCenter:CGPointMake(SCREEN_WIDTH / 2, _middleContainerBar.frame.size.height / 2)];
+            [_cameraSwitcherButton setCenter:CGPointMake(SCREEN_WIDTH / 2.0f - 116 / 2.0f - 65 / 2.0f, _middleContainerBar.frame.size.height / 2)];
         } else {
-            [_cameraSwitcherButton setCenter:CGPointMake(SCREEN_WIDTH / 2, _topContainerBar.frame.size.height / 2)];
+            [_cameraSwitcherButton setCenter:CGPointMake(SCREEN_WIDTH / 2.0f - 116 / 2.0f - 65 / 2.0f, _topContainerBar.frame.size.height / 2)];
         }
     }
     return _cameraSwitcherButton;
@@ -206,9 +213,9 @@
         [_flashButton setFrame:CGRectMake(0, 0, 32, 32)];
         
         if (_middleContainerBar) {
-            [_flashButton setCenter:CGPointMake(SCREEN_WIDTH / 2 + 80, _middleContainerBar.frame.size.height / 2)];
+            [_flashButton setCenter:CGPointMake(SCREEN_WIDTH / 2 + 116 / 2.0f + 65 / 2.0f, _middleContainerBar.frame.size.height / 2)];
         } else {
-            [_flashButton setCenter:CGPointMake(SCREEN_WIDTH / 2 + 60, _topContainerBar.frame.size.height / 2)];
+            [_flashButton setCenter:CGPointMake(SCREEN_WIDTH / 2 + 116 / 2.0f + 65 / 2.0f, _topContainerBar.frame.size.height / 2)];
         }
     }
     return _flashButton;
