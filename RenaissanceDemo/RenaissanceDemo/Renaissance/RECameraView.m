@@ -182,8 +182,8 @@
             _gridButton.center = CGPointMake(SCREEN_WIDTH / 2.0f, _topContainerBar.frame.size.height / 2);
         }
         
-        [_gridButton setImage:[[UIImage imageNamed:@"vr_camera_grid"] tintImageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
-        [_gridButton setImage:[[UIImage imageNamed:@"vr_camera_grid"] tintImageWithColor:ThemeColor] forState:UIControlStateSelected];
+        [_gridButton setImage:[[UIImage imageNamed:@"ve_camera_grid"] tintImageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
+        [_gridButton setImage:[[UIImage imageNamed:@"ve_camera_grid"] tintImageWithColor:ThemeColor] forState:UIControlStateSelected];
     }
     return _gridButton;
 }
@@ -192,8 +192,8 @@
     if (!_cameraSwitcherButton) {
         _cameraSwitcherButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_cameraSwitcherButton setBackgroundColor:[UIColor clearColor]];
-        [_cameraSwitcherButton setImage:[[UIImage imageNamed:@"vr_camera_switch"] tintImageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
-        [_cameraSwitcherButton setImage:[[UIImage imageNamed:@"vr_camera_switch"] tintImageWithColor:ThemeColor] forState:UIControlStateSelected];
+        [_cameraSwitcherButton setImage:[[UIImage imageNamed:@"ve_camera_switch"] tintImageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
+        [_cameraSwitcherButton setImage:[[UIImage imageNamed:@"ve_camera_switch"] tintImageWithColor:ThemeColor] forState:UIControlStateSelected];
         [_cameraSwitcherButton setFrame:CGRectMake(0, 0, 65 / 2.0f, 65 / 2.0f)];
         
         if (_middleContainerBar) {
