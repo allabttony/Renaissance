@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.platform = :ios, '7.0'
   s.requires_arc = true
   s.source_files  = 'RenaissanceDemo/RenaissanceDemo/Renaissance/*.{h,m}', 'RenaissanceDemo/RenaissanceDemo/Renaissance/Category/*.{h,m}'
-	s.resources = 'RenaissanceDemo/RenaissanceDemo/Renaissance/Resources/*.png'  
-  s.dependency "PBJVision"
+  s.resources = 'RenaissanceDemo/RenaissanceDemo/Renaissance/Resources/*.png'  
+  s.dependency 'PBJVision'
 end
