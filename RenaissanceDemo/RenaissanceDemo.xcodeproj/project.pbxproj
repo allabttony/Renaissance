@@ -24,10 +24,9 @@
 		EA39B3871AD83BA600F98AD9 /* re_camera_flash_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA39B3811AD83BA600F98AD9 /* re_camera_flash_stop@2x.png */; };
 		EA39B3881AD83BA600F98AD9 /* re_camera_flash_stop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA39B3821AD83BA600F98AD9 /* re_camera_flash_stop@3x.png */; };
 		EA39B38B1AD842C000F98AD9 /* RELibraryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA39B38A1AD842C000F98AD9 /* RELibraryManager.m */; };
-		EA39B38E1AD843A800F98AD9 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = EA39B38D1AD843A800F98AD9 /* UIImage+Crop.m */; };
 		EA5A71C71AB6C9D700EBE182 /* RECameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A71C61AB6C9D700EBE182 /* RECameraView.m */; };
-		EA66ECAD1A3C1D2B000B4C16 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66ECAA1A3C1D2B000B4C16 /* UIImage+Resize.m */; };
 		EA66ECAE1A3C1D2B000B4C16 /* UIImage+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66ECAC1A3C1D2B000B4C16 /* UIImage+TintColor.m */; };
+		EA79526F1AE2C62E0064B657 /* RECategories.m in Sources */ = {isa = PBXBuildFile; fileRef = EA79526E1AE2C62E0064B657 /* RECategories.m */; };
 		EA84E2FA1A3208C7001DAF57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E2F91A3208C7001DAF57 /* main.m */; };
 		EA84E2FD1A3208C7001DAF57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E2FC1A3208C7001DAF57 /* AppDelegate.m */; };
 		EA84E3001A3208C7001DAF57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E2FF1A3208C7001DAF57 /* ViewController.m */; };
@@ -74,14 +73,12 @@
 		EA39B3821AD83BA600F98AD9 /* re_camera_flash_stop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "re_camera_flash_stop@3x.png"; sourceTree = "<group>"; };
 		EA39B3891AD842C000F98AD9 /* RELibraryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RELibraryManager.h; sourceTree = "<group>"; };
 		EA39B38A1AD842C000F98AD9 /* RELibraryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RELibraryManager.m; sourceTree = "<group>"; };
-		EA39B38C1AD843A800F98AD9 /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
-		EA39B38D1AD843A800F98AD9 /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
 		EA5A71C51AB6C9D700EBE182 /* RECameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RECameraView.h; path = RenaissanceDemo/Renaissance/RECameraView.h; sourceTree = SOURCE_ROOT; };
 		EA5A71C61AB6C9D700EBE182 /* RECameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RECameraView.m; path = RenaissanceDemo/Renaissance/RECameraView.m; sourceTree = SOURCE_ROOT; };
-		EA66ECA91A3C1D2B000B4C16 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		EA66ECAA1A3C1D2B000B4C16 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		EA66ECAB1A3C1D2B000B4C16 /* UIImage+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TintColor.h"; sourceTree = "<group>"; };
 		EA66ECAC1A3C1D2B000B4C16 /* UIImage+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TintColor.m"; sourceTree = "<group>"; };
+		EA79526D1AE2C62E0064B657 /* RECategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECategories.h; sourceTree = "<group>"; };
+		EA79526E1AE2C62E0064B657 /* RECategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECategories.m; sourceTree = "<group>"; };
 		EA84E2F41A3208C7001DAF57 /* RenaissanceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RenaissanceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA84E2F81A3208C7001DAF57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA84E2F91A3208C7001DAF57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -155,14 +152,12 @@
 		EA66ECA81A3C1D2B000B4C16 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				EA39B38C1AD843A800F98AD9 /* UIImage+Crop.h */,
-				EA39B38D1AD843A800F98AD9 /* UIImage+Crop.m */,
-				EA66ECA91A3C1D2B000B4C16 /* UIImage+Resize.h */,
-				EA66ECAA1A3C1D2B000B4C16 /* UIImage+Resize.m */,
 				EA66ECAB1A3C1D2B000B4C16 /* UIImage+TintColor.h */,
 				EA66ECAC1A3C1D2B000B4C16 /* UIImage+TintColor.m */,
 				EAAF045E1AA5B29B0018727A /* UIButton+Block.h */,
 				EAAF045F1AA5B29B0018727A /* UIButton+Block.m */,
+				EA79526D1AE2C62E0064B657 /* RECategories.h */,
+				EA79526E1AE2C62E0064B657 /* RECategories.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -416,15 +411,14 @@
 			files = (
 				EA84E3001A3208C7001DAF57 /* ViewController.m in Sources */,
 				EA5A71C71AB6C9D700EBE182 /* RECameraView.m in Sources */,
+				EA79526F1AE2C62E0064B657 /* RECategories.m in Sources */,
 				EA84E2FD1A3208C7001DAF57 /* AppDelegate.m in Sources */,
 				EA84E2FA1A3208C7001DAF57 /* main.m in Sources */,
-				EA39B38E1AD843A800F98AD9 /* UIImage+Crop.m in Sources */,
 				EA39B38B1AD842C000F98AD9 /* RELibraryManager.m in Sources */,
 				EAAF04601AA5B29B0018727A /* UIButton+Block.m in Sources */,
 				EA90C6FB1A3695050056A948 /* REGridView.m in Sources */,
 				EA66ECAE1A3C1D2B000B4C16 /* UIImage+TintColor.m in Sources */,
 				EA84E3201A320D47001DAF57 /* RECameraController.m in Sources */,
-				EA66ECAD1A3C1D2B000B4C16 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

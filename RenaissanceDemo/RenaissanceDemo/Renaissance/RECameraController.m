@@ -11,8 +11,7 @@
 #import <GLKit/GLKit.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <PBJVision/PBJVision.h>
-#import "UIButton+Block.h"
-#import "UIImage+Resize.h"
+#import "RECategories.h"
 #import "RECameraView.h"
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
@@ -88,18 +87,19 @@
 
 - (void)_handleActions {
     __weak typeof(self) weakSelf = self;
-    [_cameraView.photoTrigger setAction:kUIButtonBlockTouchUpInside withBlock:^{
+    [_cameraView.photoTrigger handleControlEvent:UIControlEventTouchUpInside withBlock:^(id sender) {
         [weakSelf.vision capturePhoto];
         [UIView animateWithDuration:0.2 animations:^{
             [weakSelf.cameraView _switching:SCREEN_WIDTH];
         } completion:nil];
     }];
     
-    [_cameraView.closeButton setAction:kUIButtonBlockTouchUpInside withBlock:^(){
+    [_cameraView.closeButton handleControlEvent:UIControlEventTouchUpInside withBlock:^(id sender) {
         [weakSelf.delegate cameraDidCancel:weakSelf];
+
     }];
     
-    [_cameraView.libraryButton setAction:kUIButtonBlockTouchUpInside withBlock:^{
+    [_cameraView.libraryButton handleControlEvent:UIControlEventTouchUpInside withBlock:^(id sender) {
         UIImagePickerController *pc = [[UIImagePickerController alloc] init];
         pc.delegate = weakSelf;
         pc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -111,11 +111,11 @@
         }];
     }];
     
-    [_cameraView.gridButton setAction:kUIButtonBlockTouchUpInside withBlock:^{
+    [_cameraView.gridButton handleControlEvent:UIControlEventTouchUpInside withBlock:^(id sender){
         [weakSelf.cameraView _changeGridState];
     }];
     
-    [_cameraView.cameraSwitcherButton setAction:kUIButtonBlockTouchUpInside withBlock:^{
+    [_cameraView.cameraSwitcherButton handleControlEvent:UIControlEventTouchUpInside withBlock:^(id sender) {
         [weakSelf.cameraView _changeCameraSwitchButtonState];
         
         switch (weakSelf.vision.cameraDevice) {
@@ -130,7 +130,7 @@
         }
     }];
     
-    [_cameraView.flashButton setAction:kUIButtonBlockTouchUpInside withBlock:^{
+    [_cameraView.flashButton handleControlEvent:UIControlEventTouchUpInside withBlock:^(id sender) {
         switch (weakSelf.vision.flashMode) {
             case AVCaptureFlashModeOff: {
                 weakSelf.vision.flashMode = AVCaptureFlashModeOn;
@@ -148,7 +148,6 @@
         }
         [weakSelf.cameraView _changeFlashButtonState:weakSelf.vision.flashMode];
     }];
-    
 }
 
 #pragma mark - init

@@ -8,7 +8,7 @@
 
 #import "RELibraryManager.h"
 
-#import "UIImage+Crop.h"
+#import "RECategories.h"
 
 @interface RELibraryManager () {
     NSMutableArray *_assetGroups;
