@@ -25,7 +25,6 @@
 		EA39B3881AD83BA600F98AD9 /* re_camera_flash_stop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA39B3821AD83BA600F98AD9 /* re_camera_flash_stop@3x.png */; };
 		EA39B38B1AD842C000F98AD9 /* RELibraryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA39B38A1AD842C000F98AD9 /* RELibraryManager.m */; };
 		EA5A71C71AB6C9D700EBE182 /* RECameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A71C61AB6C9D700EBE182 /* RECameraView.m */; };
-		EA66ECAE1A3C1D2B000B4C16 /* UIImage+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66ECAC1A3C1D2B000B4C16 /* UIImage+TintColor.m */; };
 		EA79526F1AE2C62E0064B657 /* RECategories.m in Sources */ = {isa = PBXBuildFile; fileRef = EA79526E1AE2C62E0064B657 /* RECategories.m */; };
 		EA84E2FA1A3208C7001DAF57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E2F91A3208C7001DAF57 /* main.m */; };
 		EA84E2FD1A3208C7001DAF57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E2FC1A3208C7001DAF57 /* AppDelegate.m */; };
@@ -35,7 +34,6 @@
 		EA84E3141A3208C7001DAF57 /* RenaissanceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E3131A3208C7001DAF57 /* RenaissanceDemoTests.m */; };
 		EA84E3201A320D47001DAF57 /* RECameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84E31F1A320D47001DAF57 /* RECameraController.m */; };
 		EA90C6FB1A3695050056A948 /* REGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA90C6FA1A3695050056A948 /* REGridView.m */; };
-		EAAF04601AA5B29B0018727A /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAF045F1AA5B29B0018727A /* UIButton+Block.m */; };
 		EAB850F61A334D00008E3DCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB850F51A334D00008E3DCB /* UIKit.framework */; };
 		EAB850F81A334D1C008E3DCB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB850F71A334D1C008E3DCB /* AVFoundation.framework */; };
 		EAB850FA1A334D3E008E3DCB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB850F91A334D3E008E3DCB /* QuartzCore.framework */; };
@@ -75,8 +73,6 @@
 		EA39B38A1AD842C000F98AD9 /* RELibraryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RELibraryManager.m; sourceTree = "<group>"; };
 		EA5A71C51AB6C9D700EBE182 /* RECameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RECameraView.h; path = RenaissanceDemo/Renaissance/RECameraView.h; sourceTree = SOURCE_ROOT; };
 		EA5A71C61AB6C9D700EBE182 /* RECameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RECameraView.m; path = RenaissanceDemo/Renaissance/RECameraView.m; sourceTree = SOURCE_ROOT; };
-		EA66ECAB1A3C1D2B000B4C16 /* UIImage+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TintColor.h"; sourceTree = "<group>"; };
-		EA66ECAC1A3C1D2B000B4C16 /* UIImage+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TintColor.m"; sourceTree = "<group>"; };
 		EA79526D1AE2C62E0064B657 /* RECategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECategories.h; sourceTree = "<group>"; };
 		EA79526E1AE2C62E0064B657 /* RECategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECategories.m; sourceTree = "<group>"; };
 		EA84E2F41A3208C7001DAF57 /* RenaissanceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RenaissanceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,8 +91,6 @@
 		EA84E31F1A320D47001DAF57 /* RECameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECameraController.m; sourceTree = "<group>"; };
 		EA90C6F91A3695050056A948 /* REGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REGridView.h; sourceTree = "<group>"; };
 		EA90C6FA1A3695050056A948 /* REGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REGridView.m; sourceTree = "<group>"; };
-		EAAF045E1AA5B29B0018727A /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
-		EAAF045F1AA5B29B0018727A /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
 		EAB850F51A334D00008E3DCB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EAB850F71A334D1C008E3DCB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EAB850F91A334D3E008E3DCB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -152,10 +146,6 @@
 		EA66ECA81A3C1D2B000B4C16 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				EA66ECAB1A3C1D2B000B4C16 /* UIImage+TintColor.h */,
-				EA66ECAC1A3C1D2B000B4C16 /* UIImage+TintColor.m */,
-				EAAF045E1AA5B29B0018727A /* UIButton+Block.h */,
-				EAAF045F1AA5B29B0018727A /* UIButton+Block.m */,
 				EA79526D1AE2C62E0064B657 /* RECategories.h */,
 				EA79526E1AE2C62E0064B657 /* RECategories.m */,
 			);
@@ -415,9 +405,7 @@
 				EA84E2FD1A3208C7001DAF57 /* AppDelegate.m in Sources */,
 				EA84E2FA1A3208C7001DAF57 /* main.m in Sources */,
 				EA39B38B1AD842C000F98AD9 /* RELibraryManager.m in Sources */,
-				EAAF04601AA5B29B0018727A /* UIButton+Block.m in Sources */,
 				EA90C6FB1A3695050056A948 /* REGridView.m in Sources */,
-				EA66ECAE1A3C1D2B000B4C16 /* UIImage+TintColor.m in Sources */,
 				EA84E3201A320D47001DAF57 /* RECameraController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

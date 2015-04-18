@@ -9,9 +9,9 @@
 #import "RECameraView.h"
 
 #import "REGridView.h"
-#import "UIImage+TintColor.h"
 #import "RECameraController.h"
 
+#import "RECategories.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
 #import "RELibraryManager.h"

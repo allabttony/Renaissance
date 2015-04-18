@@ -81,6 +81,17 @@
 
 @end
 
+@interface UIImage (TintColor)
+/**
+ *  Tint the image using this method/
+ *
+ *  @param tintColor the color you selected
+ *
+ *  @return the image tinted with the color you selected
+ */
+- (UIImage *) tintImageWithColor:(UIColor *)tintColor;
+@end
+
 @interface UIButton (REBlock)
 
 typedef void (^ActionBlock)(id sender);
